@@ -19,7 +19,7 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
 
     if @group.save
-      redirect_to group_path
+      redirect_to groups_path
     else
       render :new
     end
@@ -32,7 +32,7 @@ class GroupsController < ApplicationController
       redirect_to groups_path, notice: "Update Success"
     else
       render :edit
-    end 
+    end
   end
 
   def destroy
